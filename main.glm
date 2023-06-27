@@ -13,7 +13,7 @@ clock
 
 // Task 2 - Load weather data 
 #ifmissing "AZ-Deer_Valley_Phoenix.glm"
-#weather get AZ-Deer_Valley_Phoenix
+#weather get AZ-Deer_Valley_Phoenix                   // Why no file extension?
 #endif
 #input "AZ-Deer_Valley_Phoenix.tmy3"
 
