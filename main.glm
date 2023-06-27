@@ -3,18 +3,18 @@
 #endif
 #include "123.glm"
 
-// Task 1 - set the clock
+// Task 1 - Set the clock
 clock
 {
-    timezone America/Los_Angeles;
-    starttime "2020-01-01 12:00:00 PDT";
-    stoptime "2021-01-01 12:00:00 PDT";
+    timezone GMT-6;               //  in Phoenix, Arizona
+    starttime "2020-01-01 12:00:00 MST";
+    stoptime "2021-01-01 12:00:00 MST";
 }
 
 // Task 2 - Load weather data 
-#ifmissing "CA-Los_Angeles_Intl_Arpt.glm"
-#weather get CA-Los_Angeles_Intl_Arpt
+#ifmissing "AZ-Deer_Valley_Phoenix.glm"
+#weather get AZ-Deer_Valley_Phoenix
 #endif
-#input "CA-Los_Angeles_Intl_Arpt.tmy3"
+#input "AZ-Deer_Valley_Phoenix.tmy3"
 
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
